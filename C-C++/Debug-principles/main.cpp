@@ -8,7 +8,7 @@ int A[3][5]; //Global matrix
 void print_row(int rows) 
 {
         for(int i = 0; i < 5; i++) {
-                cout <<A[rows][i]<<" ";
+                cout << A[rows][i] <<" ";
         }
         cout << "\n";
 }
