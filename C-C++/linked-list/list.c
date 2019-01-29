@@ -8,4 +8,3 @@ Node* create_node(Book* book) {
     strncpy
     strncpy
 }
-
