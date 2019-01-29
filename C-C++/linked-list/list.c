@@ -10,3 +10,9 @@ Node* create_node(Book* book) {
     node -> nex = NULL;
     return node;
 }
+
+void destroy_node(Node* node) {
+        free(node);
+}
+
+
