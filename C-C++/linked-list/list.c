@@ -21,3 +21,15 @@ void start_node(List* list, Book* book) {
         list -> head = node;
 }
 
+void end_node(List* list, Book* book) {
+        Node* node = create_node(book);
+        if (list -> head == NULL) {
+                list -> head = node;
+        } else {
+                Node* pointer = list -> head;
+                while (pointer -> nex) {
+                        pointer = pointer -> nex;
+                }
+                pointer -> nex = node;
+        }
+}
