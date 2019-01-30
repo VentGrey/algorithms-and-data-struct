@@ -15,4 +15,10 @@ void destroy_node(Node* node) {
         free(node);
 }
 
+void start_node(List* list, Book* book) {
+        Node* node = create_node(book);
+        node -> nex = list -> head;
+        list -> head = node;
+}
+
 
