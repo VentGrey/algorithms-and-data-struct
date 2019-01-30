@@ -21,4 +21,3 @@ void start_node(List* list, Book* book) {
         list -> head = node;
 }
 
-
