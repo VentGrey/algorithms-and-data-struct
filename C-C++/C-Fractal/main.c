@@ -24,6 +24,8 @@
  *       Revision:  1
  *       Compiler:  gcc-6+ or clang-6+
  *
+ *        License: BSD3
+ *
  *         Author:  Omar Jair Purata Funes (VentGrey), omarpurataf@gmail.com
  *   Organization:  Universidad de Guanajuato + Future Lab
  *
@@ -37,5 +39,19 @@
 //--- Definición de valores constantes (Tengo más seguridad que con un macro).
 //-- Constantes del eje X
 //-- Podría declarar todo en una línea, pero sinceramente que flojera
-const int xmax = 800;
-const int 
+const int Zxmax = 800;
+const float Cxmax = 1.5;
+const float Cxmin = -2.5;
+
+//-- Constantes del eje Y
+const int Zymax = 800;
+const float Cymax = 2.0;
+const float Cymin = -2.0;
+
+//--- Prototipos de funciones
+
+
+//--- MAIN
+
+
+//---Funciones
