@@ -19,6 +19,9 @@
  *                 Comparación de datos de Pascal
  *       - https://en.wikipedia.org/wiki/Comparison_of_Pascal_and_C
  *
+ *                  Un super código en pascal que no recuerdo de dónde me lo
+ *                  fusilé pero que debería de jalar si lo migro y documento
+ *
  *        Version:  1.0
  *        Created:  31/01/19 14:23:32
  *       Revision:  1
@@ -37,42 +40,28 @@
 
 
 //--- Definición de valores constantes (Tengo más seguridad que con un macro).
+// Necesitamos definir todo el marco del conjunto, si el valor es mayor a 2
+// entonces no pertenece el fractal
 //-- Constantes del eje X
-const int Zxmax = 800;
-const float Cxmax = 1.5;
-const float Cxmin = -2.5;
+
 
 //-- Constantes del eje Y
-const int Zymax = 800;
-const float Cymax = 2.0;
-const float Cymin = -2.0;
+
 
 //-- Constante de colores (Fusilada de un código de Python)
-const int colorval = 255;
+
 
 //-- Límite de iteraciones (softcoded por ahora)
-const int maxiter = 200;
-
 
 //-- Definición del radio
-const int escaperadius = 2;
+
 
 //--- Prototipos de funciones
 
 
-//--- Estructura de colores
-//TODO: Crear un parser de HEX a RGB
-typedef struct colortype {
-        char red;
-        char green;
-        char blue;
-}colortype;
-
 //--- MAIN
 int main(int argc, char *argv[])
 {
-        
-        return 0;
 }
 
 //---Funciones
