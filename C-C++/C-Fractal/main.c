@@ -59,10 +59,11 @@ int main(int argc, char *argv[])
 }
 
 //--- Funciones externas
-int mand(double complex z0, int lim) {
+int mand(double complex z0, int lim)
+{
         double complex Z = z0;
         for (int i = 0; i < lim; i++) {
-                if (abs(Z) > 2.0) return i;
+                if (cabs(Z) > 2.0) return i;
                 Z = Z * Z + z0;
         }
         return lim;
