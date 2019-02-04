@@ -37,31 +37,7 @@
 
 //--- Preprocesador
 #include <stdio.h>
+#include <math.h>
+#include <complex.h>
 
 
-//--- Definición de valores constantes (Tengo más seguridad que con un macro).
-// Necesitamos definir todo el marco del conjunto, si el valor es mayor a 2
-// entonces no pertenece el fractal
-//-- Constantes del eje X
-
-
-//-- Constantes del eje Y
-
-
-//-- Constante de colores (Fusilada de un código de Python)
-
-
-//-- Límite de iteraciones (softcoded por ahora)
-
-//-- Definición del radio
-
-
-//--- Prototipos de funciones
-
-
-//--- MAIN
-int main(int argc, char *argv[])
-{
-}
-
-//---Funciones
