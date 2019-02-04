@@ -47,6 +47,23 @@ int mand(double complex z0, int lim);
 //--- MAIN
 int main(int argc, char *argv[])
 {
-        
+        double xc = (char) argv[0];
+        double yc = (char) argv[1];
+        double size = (char) argv[2];
+
+        int n = 512;
+        int max = 255;
+
+
         return 0;
+}
+
+//--- Funciones externas
+int mand(double complex z0, int lim) {
+        double complex Z = z0;
+        for (int i = 0; i < lim; i++) {
+                if (abs(Z) > 2.0) return i;
+                Z = Z * Z + z0;
+        }
+        return lim;
 }
