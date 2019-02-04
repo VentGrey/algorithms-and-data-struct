@@ -38,6 +38,15 @@
 //--- Preprocesador
 #include <stdio.h>
 #include <math.h>
-#include <complex.h>
+#include <complex.h> /* Biblioteca para números complejos */
+
+//--- Prototipos
+int mand(double complex z0, int lim);
 
 
+//--- MAIN
+int main(int argc, char *argv[])
+{
+        
+        return 0;
+}
