@@ -24,7 +24,7 @@
  *
  *        Version:  1.0
  *        Created:  31/01/19 14:23:32
- *       Revision:  1
+ *       Revision:  7
  *       Compiler:  gcc-6+ or clang-6+
  *
  *        License: BSD Clause 3 - Revisited
@@ -36,9 +36,9 @@
  */
 
 //--- Preprocesador
-#include <stdio.h>
-#include <math.h> //Ni se para que voy a ocupar esto pero no vaya a ser
-#include <complex.h> /* Biblioteca para números complejos */
+#include <stdio.h> // ¿Hace falta explicar?...
+#include <stdlib.h> // Para conversión de cadena a doble
+#include <complex.h> // Biblioteca para números complejos
 
 //--- Prototipos
 int mand(double complex z0, int lim);
@@ -47,12 +47,15 @@ int mand(double complex z0, int lim);
 //--- MAIN
 int main(int argc, char *argv[])
 {
-        double xc = 500;
-        double yc = 500;
-        double size = 200;
+        //TODO: Implementar argumentos a la función main
+        // El fractal estará centrado en...
+        double xC = 0;
+        double yC = 0;
 
-        int n = 512;
-        int max = 255;
+        double tam = 2;
+
+        int n = 200; // Dimensiones de la imágen (De nxn)
+        int max = 255; // Número de iteraciones
 
 
         return 0;
@@ -64,7 +67,7 @@ int mand(double complex z0, int lim)
         double complex Z = z0;
         for (int i = 0; i < lim; i++) {
                 if (cabs(Z) > 2.0) return i;
-                Z = Z * Z + z0;
+                Z = Z * Z + z0; //FIXME: Arreglar la precedencia de op aquí.
         }
         return lim;
 }
