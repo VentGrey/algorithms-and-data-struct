@@ -37,7 +37,7 @@
 
 //--- Preprocesador
 #include <stdio.h>
-#include <math.h>
+#include <math.h> //Ni se para que voy a ocupar esto pero no vaya a ser
 #include <complex.h> /* Biblioteca para números complejos */
 
 //--- Prototipos
@@ -47,9 +47,9 @@ int mand(double complex z0, int lim);
 //--- MAIN
 int main(int argc, char *argv[])
 {
-        double xc = (char) argv[0];
-        double yc = (char) argv[1];
-        double size = (char) argv[2];
+        double xc = 500;
+        double yc = 500;
+        double size = 200;
 
         int n = 512;
         int max = 255;
