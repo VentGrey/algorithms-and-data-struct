@@ -1,11 +1,11 @@
 /**
  * ============================================================================
  *
- *       Filename:  main.c
+ *       Filename:  main.cpp
  *
  *   Coding Style:  Linux Kernel 4.x + Mozilla Coding Guidelines.
  *
- *    Description:  Un programa en C que genera un Fractal de Mandelbrot.
+ *    Description:  Un programa en C++ que genera un Fractal de Mandelbrot.
  *
  *        Sources: La información y el código creado fueron posibles gracias a
  *                 las siguientes fuentes de información:
@@ -24,8 +24,8 @@
  *
  *        Version:  1.0
  *        Created:  31/01/19 14:23:32
- *       Revision:  7
- *       Compiler:  gcc-6+ or clang-6+
+ *       Revision:  23
+ *       Compiler:  gcc-8+
  *
  *        License: BSD Clause 3 - Revisited
  *
@@ -36,13 +36,15 @@
  */
 
 //--- Preprocesador
-#include <stdio.h> // ¿Hace falta explicar?...
 #include <stdlib.h> // Para conversión de cadena a doble
 #include <complex.h> // Biblioteca para números complejos
+#include <iostream>
+
+//--- Namespaces
+using namespace std;
 
 //--- Prototipos
-int mand(double complex z0, int lim);
-
+int mand(complex<double> z0, int lim);
 
 //--- MAIN
 int main(int argc, char *argv[])
@@ -62,11 +64,12 @@ int main(int argc, char *argv[])
 }
 
 //--- Funciones externas
-int mand(double complex z0, int lim)
+int mand(complex<double> z0, int lim)
 {
-        double complex Z = z0;
+        complex<double> Z = z0;
+
         for (int i = 0; i < lim; i++) {
-                if (cabs(Z) > 2.0) return i;
+                if (abs(Z) > 2.0) return i;
                 Z = Z * Z + z0; //FIXME: Arreglar la precedencia de op aquí.
         }
         return lim;
