@@ -25,7 +25,7 @@
  *        Version:  1.0
  *        Created:  31/01/19 14:23:32
  *       Revision:  23
- *       Compiler:  gcc-8+
+ *       Compiler:  g++-8+
  *
  *        License: BSD Clause 3 - Revisited
  *
@@ -58,7 +58,7 @@ int main(int argc, char const *argv[])
                 cout << "Modo de empleo: fract [X0] [Y0] [SIZE]" << endl;
                 cout << "Estados de salida:" << endl;
                 cout << "0 -- Todo fue bien" << endl;
-                cout << "1 -- Problema menor" << endl;
+                cout << "1 -- Problema menor" << endl << endl;;
                 cout << "2 -- Problema mayor" << endl;
                 return 0;
 
@@ -71,6 +71,10 @@ int main(int argc, char const *argv[])
 
         int n = 200; // Dimensiones de la imágen (De nxn)
         int max = 255; // Número de iteraciones
+
+        ofstream mandelbrot("fractal.pgm");
+        // Escribir la cabecera del archivo pgm
+        mandelbrot << "P2" << endl << n << "" << n << endl << tam << endl;
 
 
         return 0;
