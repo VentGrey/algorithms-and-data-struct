@@ -36,9 +36,10 @@
  */
 
 //--- Preprocesador
-#include <stdlib.h> // Para conversión de cadena a doble
+#include <cstdlib> // Para conversión de cadena a doble
 #include <complex.h> // Biblioteca para números complejos
 #include <iostream>
+#include <fstream>
 
 //--- Namespaces
 using namespace std;
@@ -47,14 +48,26 @@ using namespace std;
 int mand(complex<double> z0, int lim);
 
 //--- MAIN
-int main(int argc, char *argv[])
+int main(int argc, char const *argv[])
 {
-        //TODO: Implementar argumentos a la función main
-        // El fractal estará centrado en...
-        double xC = 0;
-        double yC = 0;
+        if (argc > 2) {
+                cout << "Faltan operandos en el programa" << endl;
+                cout << "Pruebe 'fract -h' para mas información" << endl;
+                return 1;
+        } else if (std::string(argv[0]) == "-h") {
+                cout << "Modo de empleo: fract [X0] [Y0] [SIZE]" << endl;
+                cout << "Estados de salida:" << endl;
+                cout << "0 -- Todo fue bien" << endl;
+                cout << "1 -- Problema menor" << endl;
+                cout << "2 -- Problema mayor" << endl;
+                return 0;
 
-        double tam = 2;
+        }
+
+        // El fractal estará centrado en...
+        double xC = atof(argv[0]);
+        double yC = atof(argv[1]);
+        double tam = atof(argv[2]);
 
         int n = 200; // Dimensiones de la imágen (De nxn)
         int max = 255; // Número de iteraciones
