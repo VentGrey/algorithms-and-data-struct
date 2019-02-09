@@ -11,19 +11,27 @@
 //--- Clases
 
 /* Clase principal para el manejo de imágenes
- * El guión bajo delimiará que atributos son privados*/
+ * "p" delimiará que atributos son privados porque en C++ no se puede*/
 class Imagen {
-        int _lon;
-        int _alt;
-        std::vector<uint32_t> datos_; //Vector de enteros sin signo (32 bits)
+        int plon;
+        int palt;
+        std::vector<uint32_t> pdatos; //Vector de enteros sin signo (32 bits)
 
         public:
                 // Constructor por defecto de la clase
                 // (Generará una imagen de tamaño 0,0)
-                Imagen()
-                : _lon(0)
-                , _alt(0)
+                Imagen():
+                        plon(0),
+                        palt(0)
                 {}
+
+                // Constructor con parámetros (los valores comienzan por 0)
+                Imagen(unsigned int lon, unsigned int alt)
+                : plon(lon)
+                , palt(alt)
+                , pdatos(lon * alt, uint32_t())
+                {}
+
 };
 
 
