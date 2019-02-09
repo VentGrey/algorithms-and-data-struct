@@ -52,9 +52,14 @@ class PGM {
                 // https://www.geeksforgeeks.org/fractals-in-cc/ existe
                 // para medio-fusilarse eso
                 void scale(int nlon, int nalt) {
-                        ppuntos.scale(nlon * nalt, int16_t()); // Recursive :D
+                        ppuntos.scale(nlon * nalt, int32_t()); // Recursive :D
                         plon = nlon;
                         palt = nalt;
+                }
+
+                // Posicionador de coordenadas (x, y) de un pixel reescalado
+                int pos()(int x, int y) {
+                        return ppuntos[x + y * plon];
                 }
 };
 
