@@ -8,6 +8,15 @@
 #include <stdexcept> // Excepciones (Más bonitas que las de Java por cierto)
 #include <cstdint> // Enteros de un tipo específico
 
+//--- Clases
+
+/* Clase principal para el manejo de imágenes */
+class Imagen {
+        int _lon;
+        int _alt;
+        std::vector<uint32_t> datos_; //Vector de enteros sin signo (32 bits)
+}
+
 
 //--- Namespaces
 using namespace std;
