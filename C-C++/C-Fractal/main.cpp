@@ -10,12 +10,21 @@
 
 //--- Clases
 
-/* Clase principal para el manejo de imágenes */
+/* Clase principal para el manejo de imágenes
+ * El guión bajo delimiará que atributos son privados*/
 class Imagen {
         int _lon;
         int _alt;
         std::vector<uint32_t> datos_; //Vector de enteros sin signo (32 bits)
-}
+
+        public:
+                // Constructor por defecto de la clase
+                // (Generará una imagen de tamaño 0,0)
+                Imagen()
+                : _lon(0)
+                , _alt(0)
+                {}
+};
 
 
 //--- Namespaces
