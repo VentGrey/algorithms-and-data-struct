@@ -15,7 +15,7 @@
 class PGM {
         int plon;
         int palt;
-        std::vector<uint32_t> ppuntos; //Vector de enteros sin signo (32 bits)
+        std::vector<int32_t> ppuntos; //Vector de enteros sin signo (32 bits)
 
         public:
                 // Constructor de longitud
@@ -44,15 +44,17 @@ class PGM {
                 PGM(int lon, int alt):
                 plon(lon),
                 palt(alt),
-                ppuntos(lon * alt, uint32_t())
+                ppuntos(lon * alt, int32_t())
                 {}
 
                 // Si deseamos rellenar el fractal necesitamos escalar los
                 // pixeles anteriormente definidos, afortunadamente
                 // https://www.geeksforgeeks.org/fractals-in-cc/ existe
                 // para medio-fusilarse eso
-                void scale(int n_lon, int n_alt) {
-                        
+                void scale(int nlon, int nalt) {
+                        ppuntos.scale(nlon * nalt, int16_t()); // Recursive :D
+                        plon = nlon;
+                        palt = nalt;
                 }
 };
 
