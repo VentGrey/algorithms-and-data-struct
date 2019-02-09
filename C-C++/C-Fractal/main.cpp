@@ -1,8 +1,13 @@
 //--- Preprocesador
 #include <cstdlib> // Para conversión de cadena a doble
 #include <complex.h> // Biblioteca para números complejos
-#include <iostream>
-#include <fstream>
+#include <iostream> // Basic Input Output Stream
+#include <fstream> // Manejo y carga de archivos
+#include <vector>     // Con suerte debería funcionar en lugar de usar arreglos
+#include <string>       ///
+#include <stdexcept> // Excepciones (Más bonitas que las de Java por cierto)
+#include <cstdint> // Enteros de un tipo específico
+
 
 //--- Namespaces
 using namespace std;
@@ -43,6 +48,8 @@ int main(int argc, char const *argv[])
                         double x0 = xC - tam/2 + tam * i/n;
                         double y0 = yC - tam/2  + tam * j/n;
 
+                        complex<double> z0 = complex<double>(x0, y0);
+                        int black = max - mand(z0, max);
                 }
         }
 
