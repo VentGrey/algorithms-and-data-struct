@@ -46,8 +46,12 @@ int mand(complex<double> z0, int lim)
         complex<double> Z = z0;
 
         for (int i = 0; i < lim; i++) {
-                if (abs(Z) > 2.0) return i;
-                Z = Z * Z + z0; //FIXME: Arreglar la precedencia de op aquí.
+                if (abs(Z) > 2.0) {
+                        return i;
+                } else {
+                        Z = Z * Z + z0; //FIXME: Arreglar la precedencia de op aquí.
+                }
+
         }
         return lim;
 }
