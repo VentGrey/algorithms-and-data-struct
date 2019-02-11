@@ -17,13 +17,15 @@ int main(int argc, char const *argv[])
         double xC = 1;
         double yC = 1;
         double tam = 255;
-        int n = 128; // Dimensiones de la imágen (De nxn)
+        int n = 128; // Dimensiones de la imagen (n)
+        int m = 128; // Dimensiones de la imagen (m)
         int max = 255; // Número de iteraciones
 
+        int matrix [m][n];
         ofstream mandelbrot("fractal.pgm");
         // Escribir la cabecera del archivo pgm
         mandelbrot << "P2\n" << n << " " << n << endl << tam << endl;
-
+        complex<double> z0 = complex<double>(xC, yC);
         return 0;
 }
 
