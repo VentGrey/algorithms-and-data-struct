@@ -1,27 +1,16 @@
 //--- Preprocesador
-#include <cstdlib> // Para conversión de cadena a doble
-#include <complex> // Biblioteca para números complejos
-#include <iostream>
-#include <fstream>
+#include <stdlib.h> // Para conversión de cadena a doble
+#include <complex.h> // Biblioteca para números complejos
+#include <stdio.h>
 
-int n = 128;
-
-//--- Namespaces
-using namespace std;
 
 //--- Prototipos
-int mand(complex<double> z0, int lim);
+int mandelbrot(int, int, int);
 
 //--- MAIN
 int main(int argc, char const *argv[])
 {
-        // El fractal estará centrado en...
-        double tam = 255;
-        int max = 255; // Número de iteraciones
 
-        ofstream mandelbrot("fractal.pgm");
-        // Escribir la cabecera del archivo pgm
-        mandelbrot << "P2\n" << n << " " << n << endl << tam << endl;
         return 0;
 }
 
