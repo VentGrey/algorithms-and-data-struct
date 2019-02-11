@@ -14,25 +14,15 @@ int mand(complex<double> z0, int lim);
 int main(int argc, char const *argv[])
 {
         // El fractal estará centrado en...
-        double xC = 100;
-        double yC = 100;
-        double tam = 10;
-        int n = 255; // Dimensiones de la imágen (De nxn)
+        double xC = 1;
+        double yC = 1;
+        double tam = 255;
+        int n = 128; // Dimensiones de la imágen (De nxn)
         int max = 255; // Número de iteraciones
 
         ofstream mandelbrot("fractal.pgm");
         // Escribir la cabecera del archivo pgm
-        mandelbrot << "P2" << endl << n << " " << n << endl << tam << endl;
-
-        for (int i = 0; i < n; i++) {
-                for (int j = 0; j < n; j++) {
-                        int x0 = xC - tam/2 + tam * i/n;
-                        int y0 = yC - tam/2  + tam * j/n;
-                        mandelbrot << x0 << " " << y0;
-                }
-                mandelbrot << endl;
-        }
-        mandelbrot.close();
+        mandelbrot << "P2\n" << n << " " << n << endl << tam << endl;
 
         return 0;
 }
@@ -41,17 +31,17 @@ int main(int argc, char const *argv[])
 
 //-- Retornar el número de iteraciones para revisar si c = a + ib pertenece al
 //-- conjunto de mandelbrot
-int mand(complex<double> z0, int lim)
+int mand(complex<double> z0, int max)
 {
         complex<double> Z = z0;
 
-        for (int i = 0; i < lim; i++) {
+        for (int i = 0; i < max; i++) {
                 if (abs(Z) > 2.0) {
                         return i;
                 } else {
-                        Z = Z * Z + z0; //FIXME: Arreglar la precedencia de op aquí.
+                        Z = Z * Z + z0;
                 }
 
         }
-        return lim;
+        return max;
 }
