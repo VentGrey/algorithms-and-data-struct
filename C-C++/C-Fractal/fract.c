@@ -12,29 +12,43 @@ complex double mandelbrot(int max, complex double z0, complex double c);
 //--- MAIN
 int main(int argc, char const *argv[])
 {
-        const int n = 128;
-        const int m = 128;
-        int iter = 10000;
+        const int n = 100;
+        const int m = 100;
+        int iter = 100;
         int matrix [m][n];
-        int pcalc = 1000;
 
         // Para discretizar la función
-        const double sup_real = 0.5; // Límite superior de los números reales
+        const double sup_real = 1.5; // Límite superior de los números reales
         const double inf_real = -1.5; // Límite inferior de los números reales
         const double sup_imag = 1.0; // Lim superior de los números imaginarios
         const double inf_imag = -1.0; // Lim inferior de los números imaginarios
 
 
-        double pX = ((sup_real - inf_real) / pcalc);
-        double pY = ((sup_imag - inf_imag) / pcalc);
+        double pX = ((sup_real - inf_real) / n);
+        double pY = ((sup_imag - inf_imag) / m);
 
-        complex double C0, Z0;
+        complex double C;
 
         for (int i = 0; i < m; i++) {
                 for (int j = 0; j < n; j++) {
-                        C0 = (inf_real + (j * pX) + (sup_real - (i * pY)) * I);
+                        C = (inf_real + (j * pX)) + ((sup_imag - (i * pY)) * I);
+                        matrix[i][j] = mandelbrot(iter, C, C);
                 }
         }
+
+        FILE *fp;
+        fp = fopen("mandelbrot-fractal.pgm", "w");
+
+        fputs("P2 \n", fp);
+        fprintf(fp, "%d %d \n", n, m);
+        fputs("1 \n", fp);
+        for(int i = 0; i < n; i++) {
+                for(int j = 0; j < m; j++) {
+                        fprintf(fp, "%d ", matrix[i][j]);
+                }
+                fputs("\n", fp);
+        }
+        /* fputs("",fp); */
 
         return 0;
 }
@@ -45,8 +59,12 @@ int main(int argc, char const *argv[])
 //-- conjunto de mandelbrot
 complex double mandelbrot(int max, complex double z0, complex double c) {
         if (max > 0) {
-                return mandelbrot(max - 1, pow(z0, 2) + c, c);
-        } else {
-                return z0;
+	  return mandelbrot(max - 1, cpow(z0, 2) + c, c);
+        }
+	else if (cabs(z0) > 2) {
+	  return 0;
+        }
+	else {
+	  return 1;
         }
 }
