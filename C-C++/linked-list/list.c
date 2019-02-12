@@ -49,3 +49,21 @@ void before_node(int n, List* list, Book* book) {
                 pointer -> nex = node;
         }
 }
+
+Book* fetch(int n, List* list) {
+        if (list -> head == NULL) {
+                return NULL;
+        } else {
+                Node* pointer = list -> head;
+                int position = 0;
+                while (position < n && pointer -> nex) {
+                        pointer = pointer -> nex;
+                        position++;
+                }
+                if (position != n) {
+                        return NULL;
+                } else {
+                        return &pointer -> book;
+                }
+        }
+}
