@@ -4,6 +4,8 @@
 #include <stdio.h>
 #include <math.h>
 
+
+
 //--- Prototipos
 complex double mandelbrot(int max, complex double z0, complex double c);
 
@@ -17,27 +19,22 @@ int main(int argc, char const *argv[])
         int pcalc = 1000;
 
         // Para discretizar la función
-        const double sup_real = 0.5;
-        const double inf_real = -1.5;
-        const double sup_imag = 1.0;
-        const double inf_imag = -1.0;
+        const double sup_real = 0.5; // Límite superior de los números reales
+        const double inf_real = -1.5; // Límite inferior de los números reales
+        const double sup_imag = 1.0; // Lim superior de los números imaginarios
+        const double inf_imag = -1.0; // Lim inferior de los números imaginarios
 
-        double puntoX = ((sup_real - inf_real) / pcalc);
-        double puntoY = ((sup_imag - inf_imag) / pcalc);
 
-        if (argc <= 0) {
-                printf("No se proporcionaron argumentos, saliendo...");
-                return 0;
-        }
+        double pX = ((sup_real - inf_real) / pcalc);
+        double pY = ((sup_imag - inf_imag) / pcalc);
 
-        for(int i = 0; i < n; i++) {
+        complex double C0, Z0;
+
+        for (int i = 0; i < m; i++) {
                 for (int j = 0; j < n; j++) {
+                        C0 = (inf_real + (j * pX) + (sup_real - (i * pY)) * I);
                 }
         }
-
-
-
-
 
         return 0;
 }
