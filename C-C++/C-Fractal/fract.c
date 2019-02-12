@@ -12,9 +12,9 @@ complex double mandelbrot(int max, complex double z0, complex double c);
 //--- MAIN
 int main(int argc, char const *argv[])
 {
-        const int n = 100;
-        const int m = 100;
-        int iter = 100;
+        const int n = 1000;
+        const int m = 1000;
+        int iter = 10000;
         int matrix [m][n];
 
         // Para discretizar la función
@@ -40,15 +40,16 @@ int main(int argc, char const *argv[])
         fp = fopen("mandelbrot-fractal.pgm", "w");
 
         fputs("P2 \n", fp);
-        fprintf(fp, "%d %d \n", n, m);
+        fprintf(fp, "%d %d \n", n, m); //No se pasar 2 argumentos a fputs
         fputs("1 \n", fp);
         for(int i = 0; i < n; i++) {
                 for(int j = 0; j < m; j++) {
-                        fprintf(fp, "%d ", matrix[i][j]);
+                        fprintf(fp, "%d ", matrix[i][j]); // Matrices tampoco
                 }
                 fputs("\n", fp);
         }
-        /* fputs("",fp); */
+        /* fputs("",fp); */ //Al final esto es useless, le daré seguimiento en
+        // GitHub
 
         return 0;
 }
