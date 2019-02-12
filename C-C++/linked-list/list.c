@@ -3,7 +3,7 @@
 #include <string.h>
 
 Node* create_node(Book* book) {
-    Node* node = (Node *) malloc(sizeof (Node));
+    Node* node = (Node *) malloc(sizeof(Node));
     strncpy(node -> book.title, book -> title, 50);
     strncpy(node -> book.author, book -> author, 50);
     strncpy(node -> book.isbn, book -> isbn, 13);
@@ -30,6 +30,22 @@ void end_node(List* list, Book* book) {
                 while (pointer -> nex) {
                         pointer = pointer -> nex;
                 }
+                pointer -> nex = node;
+        }
+}
+
+void before_node(int n, List* list, Book* book) {
+        Node* node = create_node(book);
+        if (list -> head == NULL) {
+                list -> head = node;
+        } else {
+                Node* pointer = list -> head;
+                int position = 0;
+                while (position < n && pointer -> nex) {
+                        pointer = pointer -> nex;
+                        position++;
+                }
+                node -> nex = pointer -> nex;
                 pointer -> nex = node;
         }
 }
