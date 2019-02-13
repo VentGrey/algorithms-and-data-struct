@@ -12,16 +12,16 @@ complex double mandelbrot(int max, complex double z0, complex double c);
 //--- MAIN
 int main(int argc, char const *argv[])
 {
-        const int n = 1000;
-        const int m = 1000;
-        int iter = 10000;
+        const int n = 1024;
+        const int m = 1024;
+        int iter = 500;
         int matrix [m][n];
 
         // Para discretizar la función
-        const double sup_real = 1.5; // Límite superior de los números reales
-        const double inf_real = -1.5; // Límite inferior de los números reales
-        const double sup_imag = 1.0; // Lim superior de los números imaginarios
-        const double inf_imag = -1.0; // Lim inferior de los números imaginarios
+        const double sup_real = 2.0; // Límite superior de los números reales
+        const double inf_real = -2.0; // Límite inferior de los números reales
+        const double sup_imag = 2.0; // Lim superior de los números imaginarios
+        const double inf_imag = -2.0; // Lim inferior de los números imaginarios
 
 
         double pX = ((sup_real - inf_real) / n);
