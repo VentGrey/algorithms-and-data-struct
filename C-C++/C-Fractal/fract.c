@@ -12,9 +12,9 @@ complex double mandelbrot(int max, complex double z0, complex double c);
 //--- MAIN
 int main(int argc, char const *argv[])
 {
-        const int n = 1024;
-        const int m = 1024;
-        int iter = 500;
+        const int n = 50;
+        const int m = 50;
+        int iter = 50;
         int matrix [m][n];
 
         // Para discretizar la función
