@@ -1,4 +1,4 @@
-CC = gcc
+CC = g++
 
-make: fract.c
-	$(CC) -o mandelbrot-generator fract.c -lm
+make: main.cpp
+	$(CC) -o math-parse main.cpp -lm
