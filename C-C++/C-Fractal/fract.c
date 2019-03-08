@@ -60,12 +60,10 @@ int main(int argc, char const *argv[])
 //-- conjunto de mandelbrot
 complex double mandelbrot(int max, complex double z0, complex double c) {
         if (max > 0) {
-	  return mandelbrot(max - 1, cpow(z0, 2) + c, c);
-        }
-	else if (cabs(z0) > 2) {
-	  return 0;
-        }
-	else {
-	  return 1;
+                return mandelbrot(max - 1, cpow(z0, 2) + c, c);
+        } else if (cabs(z0) > 2) {
+                return 0;
+        } else {
+                return 1;
         }
 }
