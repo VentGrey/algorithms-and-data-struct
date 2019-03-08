@@ -68,6 +68,15 @@ T Stack<T>::peek() {
         }
 }
 
+//-- *OPCIONAL* Método para revisar el tamaño de la pila, solo se usa en
+//-- empty() y en full() pero no es completamente necesario pues se puede
+//-- utilizar errno para retornar errores de exceso o falta de elementos en la
+//-- pila.
+template <class T>
+int Stack<T>::size() {
+        return top + 1;
+}
+
 //-- Método para revisar si la pila está vacía
 template <class T>
 bool Stack<T>::empty() {
