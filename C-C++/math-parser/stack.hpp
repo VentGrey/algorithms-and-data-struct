@@ -57,3 +57,13 @@ T Stack<T>::pop() {
         cout << "Eliminando elemento" << peek() << endl;
         arr[top--];
 }
+
+//-- Método para retornar el último valor en la pila
+template <class T>
+T Stack<T>::peek() {
+        if(!empty()) {
+                return arr[top];
+        } else {
+                exit(EXIT_FAILURE);
+        }
+}
