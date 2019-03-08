@@ -29,5 +29,19 @@ public:
 //-- Constructores
 template <class T>
 Stack<T>::Stack(int size) {
-        
+        arr = new T[size];
+        cap = size;
+        top = -1;
+}
+
+//-- Método push
+template <class T>
+void Stack<T>::push(T t) {
+        if (empty()) {
+                cout << "No quedan elementos en la pila, " << endl;
+                exit(EXIT_FAILURE); //www.cplusplus.com/reference/cstdlib/exit/
+        }
+
+        cout << "Elemento insertado correctamente" << endl;
+        arr[top++] = t;
 }
