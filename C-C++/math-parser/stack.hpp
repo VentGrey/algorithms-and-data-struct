@@ -37,11 +37,23 @@ Stack<T>::Stack(int size) {
 //-- Método push
 template <class T>
 void Stack<T>::push(T t) {
-        if (empty()) {
-                cout << "No quedan elementos en la pila, " << endl;
+        if (full()) {
+                cout << "¡No queda espacio en la pila! saliendo..." << endl;
                 exit(EXIT_FAILURE); //www.cplusplus.com/reference/cstdlib/exit/
         }
 
         cout << "Elemento insertado correctamente" << endl;
         arr[top++] = t;
+}
+
+//-- Método pop
+template <class T>
+T Stack<T>::pop() {
+        if (empty()) {
+                cout << "¡Acceso ilegal! saliendo..." << endl;
+                exit(EXIT_FAILURE);
+        }
+
+        cout << "Eliminando elemento" << peek() << endl;
+        arr[top--];
 }
