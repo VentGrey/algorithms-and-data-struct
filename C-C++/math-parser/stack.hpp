@@ -67,3 +67,15 @@ T Stack<T>::peek() {
                 exit(EXIT_FAILURE);
         }
 }
+
+//-- Método para revisar si la pila está vacía
+template <class T>
+bool Stack<T>::empty() {
+        return size() == 0;
+}
+
+//-- Método para revisar si la pila se encuentra llena
+template <class T>
+bool Stack<T>::full() {
+        return size() == cap;
+}
