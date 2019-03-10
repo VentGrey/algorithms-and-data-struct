@@ -1,5 +1,4 @@
 #include <iostream>
-#include <cerrno>
 #include <cstdlib>
 
 
@@ -17,7 +16,7 @@ class Stack {
         int cap;
 
 public:
-        Stack(int size = MAX); // Constructores raros de C++
+        explicit Stack(int size = MAX); // Constructores raros de C++
         void push(T);
         T pop();
         T peek();
