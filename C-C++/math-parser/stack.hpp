@@ -12,7 +12,6 @@ const int MAX = 100;
 template <class T>
 class Stack {
         T *arr;
-        int top;
         int cap;
 
 public:
@@ -21,6 +20,7 @@ public:
         T pop();
         T peek();
 
+        int top;
         int size();
         bool empty(), full();
 };

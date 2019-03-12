@@ -53,9 +53,48 @@ int eval(string elements) {
                                 // Me pasé de los 3 niveles -.- el código es
                                 // basura ahora.
 
-                                tmp = (tmp * 10) + (elements[i]-'0'); 
+                                tmp = (tmp * 10) + (elements[i]-'0');
+                                i++;
                         }
+                        valores.push(tmp);
+                } else if (elements[i] == ')') {
+                        while (!ops.empty() && ops.peek() != '(') {
+                                int a = valores.peek();
+                                valores.pop();
+                                int b = valores.peek();
+                                valores.pop();
+                                char op = ops.peek();
+                                ops.pop();
+
+                                valores.push(operate(a, b, op));
+                        }
+                        ops.pop();
+                } else {
+                        while(!ops.empty() && prec(ops.peek())
+                              >= prec(elements[i])) {
+                                int a = valores.peek();
+                                valores.pop();
+                                int b = valores.peek();
+                                valores.pop();
+                                char op = ops.peek();
+                                ops.pop();
+
+                                valores.push(operate(a, b, op));
+                        }
+                        ops.push(elements[i]);
                 }
         }
+
+        while (!ops.empty()) {
+                int a = valores.peek();
+                valores.pop();
+                int b = valores.peek();
+                valores.pop();
+                char op = ops.peek();
+                ops.pop();
+
+                valores.push(operate(a, b, op));
+        }
+        return valores.peek();
 }
 
