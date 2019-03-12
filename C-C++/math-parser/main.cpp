@@ -15,11 +15,11 @@ int main(int argc, char* argv[]) {
 
         if (argc <= 0) {
                 cout << "No se proporcionaron parámetros para operar" << endl;
-                cout << "consulte 'persephone -h' para ver la ayuda" << endl;
+                cout << "consulte 'ejecutable -h' para ver la ayuda" << endl;
         }
 
         if (string(argv[1]) == "-h" || string(argv[1]) == "--help") {
-                cout << "----- P E R S E P H O N E -----" << endl;
+                cout << "-------------------------------------------" << endl;
                 cout << "Uso: persephone <expresión>" << endl;
                 cout << "\n Persephone es un evaluador de expresiones\
 matemáticas, soporta los siguientes operadores:" << endl;
