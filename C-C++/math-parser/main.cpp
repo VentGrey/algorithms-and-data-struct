@@ -12,26 +12,6 @@ int eval(string elements);
 
 //-- Main
 int main(int argc, char* argv[]) {
-
-        if (argc <= 0) {
-                cout << "No se proporcionaron parámetros para operar" << endl;
-                cout << "consulte 'ejecutable -h' para ver la ayuda" << endl;
-        }
-
-        if (string(argv[1]) == "-h" || string(argv[1]) == "--help") {
-                cout << "-------------------------------------------" << endl;
-                cout << "Uso: persephone <expresión>" << endl;
-                cout << "\n Persephone es un evaluador de expresiones\
-matemáticas, soporta los siguientes operadores:" << endl;
-                cout << "Suma: <op> + <op>" << endl;
-                cout << "Resta: <op> - <op>" << endl;
-                cout << "Multiplicación: <op> * <op>" << endl;
-                cout << "División: <op> / <op>" << endl;
-                cout << "Potencia: <op> ^ <op>" << endl;
-                cout << "Raíz (x): <op> ~ <op>" << endl;
-        }
-
-        string(argv[1]) = eval();
   /* Tests
         cout << eval("10 + 23 * (5 + 3)") << endl;
         cout << eval("10 + 23 ^ (5 + 3)") << endl;
