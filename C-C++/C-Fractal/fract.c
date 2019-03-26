@@ -12,6 +12,10 @@ complex double mandelbrot(int max, complex double z0, complex double c);
 //--- MAIN
 int main(int argc, char const *argv[])
 {
+        if (argc == 0) {
+                printf("Ningún argumento fué provisto!");
+                return 0;
+        }
         const int n = 50;
         const int m = 50;
         int iter = 50;
