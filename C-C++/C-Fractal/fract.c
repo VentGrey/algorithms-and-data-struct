@@ -16,16 +16,34 @@ int main(int argc, char const *argv[])
                 printf("Ningún argumento fué provisto!");
                 return 0;
         }
-        const int n = 50;
-        const int m = 50;
-        int iter = 50;
-        int matrix [m][n];
+
+
+        const int n = atoi(argv[1]);
+        const int m = atoi(argv[2]);
+        int iter = atoi(argv[3]);
 
         // Para discretizar la función
-        const double sup_real = 2.0; // Límite superior de los números reales
-        const double inf_real = -2.0; // Límite inferior de los números reales
-        const double sup_imag = 2.0; // Lim superior de los números imaginarios
-        const double inf_imag = -2.0; // Lim inferior de los números imaginarios
+        const double sup_real = atof(argv[4]); // Límite superior de los números reales
+        const double inf_real = atof(argv[5]); // Límite inferior de los números reales
+        const double sup_imag = atof(argv[6]); // Lim superior de los números imaginarios
+        const double inf_imag = atof(argv[7]); // Lim inferior de los números imaginarios
+
+        if (argv[1] == 0 || argv[2] == 0) {
+                printf("No se aceptan dimensiones 'cero'");
+                return 0;
+        }
+
+      if (argv[3] == 0) {
+                printf("El iterador no puede ser cero");
+                return 0;
+      }
+
+      if (argv[4] == 0 || argv[5] == 0 || argv[6] == 0 || argv[7] == 0) {
+                printf("No se aceptan límites en cero");
+                return 0;
+        }
+        int matrix [m][n];
+
 
 
         double pX = ((sup_real - inf_real) / n);
@@ -41,7 +59,7 @@ int main(int argc, char const *argv[])
         }
 
         FILE *fp;
-        fp = fopen("mandelbrot-fractal.pgm", "w");
+        fp = fopen("mandelbrot-fractal.pgm", "w+");
 
         fputs("P2 \n", fp);
         fprintf(fp, "%d %d \n", n, m); //No se pasar 2 argumentos a fputs
