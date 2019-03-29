@@ -4,31 +4,47 @@ suma, resta y multiplicación de dichos números.*/
 use std::io;
 
 fn basic_op() {
-    println!("¡Operaciones básicas!");
+    println!("Please input your first number");
+    let mut scanner = String::new();
 
-    loop {
-        println!("Ingrese el primer número");
-        let mut entrada = String::new();
+    let mut sum: f64 = 0.0;
 
-        io::stdin().read_line(&mut entrada)
-            .expect("Fallo al leer desde teclado");
+    io::stdin()
+        .read_line(&mut scanner)
+        .expect("Something went wrong when reading user input");
 
-        let entrada: f64 = match entrada.trim().parse() {
-            Ok(num) => num,
-            Err(_) => continue,
-        };
+    let num_1 = scanner.trim();
+
+    match num_1.parse::<f64>() {
+        Ok(num_1) => {
+            println!("Number 1 registered correctly! {}", num_1);
+            sum += num_1;
+        }
+        Err(e) => {
+            eprintln!("This is not a number {}", num_1);
+            eprintln!("Error: {}", e.to_string());
+        }
     }
 
-    loop {
-        println!("Ingrese el segundo número");
-        let mut entrada1 = String::new();
-        io::stdin().read_line(&mut entrada)
-            .expect("Fallo al leer desde teclado");
+    println!("Input yout second number");
+    let mut scanner = String::new();
+    io::stdin()
+        .read_line(&mut scanner)
+        .expect("Something went wrong when reading user input");
 
-        let entrada1: f64 = match entrada.trim().parse() {
-            Ok(num1) = num1,
-            Err(_) => continue,
-        };
+    let num_2 = scanner.trim();
+
+    match num_2.parse::<f64>() {
+        Ok(num_2) => {
+            println!("Number 2 registered correctly! {}", num_2);
+            sum += num_2;
+        }
+        Err(e) => {
+            eprintln!("This is not a number {}", num_2);
+            eprintln!("Error: {}", e);
+            panic!("Cannot recover from error, exiting");
+        }
     }
 
+    println!("The sum of {} and {} is: {}", num_1, num_2, sum);
 }
