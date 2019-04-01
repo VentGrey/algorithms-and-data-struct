@@ -9,6 +9,7 @@ fn main() {
     println!("1- Operaciones básicas");
 
     let mut entrada = String::new();
+    io::stdin().read_line(&mut entrada).unwrap();
 
 
 
