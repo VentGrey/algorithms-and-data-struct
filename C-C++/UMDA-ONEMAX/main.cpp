@@ -6,6 +6,11 @@ using namespace std;
 
 int main(int argc, char *argv[]) {
 
+
+        if (argc == 0) {
+                cout << "Ningún argumento fue provisto...saliendo" << endl;
+                return -1;
+        }
         srand(time(NULL));
         int m, n, gene, samp;
 
@@ -42,6 +47,8 @@ int main(int argc, char *argv[]) {
                 }
                 cout << endl;
         }
+
+        cout << endl;
 
         return 0;
 }
