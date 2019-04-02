@@ -16,13 +16,13 @@ static int compare();
 
 // Esta función muestra la diferencia de
 static int compare(void* p1, void* p2) {
-    int* arr = (int *)p1;
-    int* arr1 = (int *)p2;
+        int* arr = (int *)p1;
+        int* arr1 = (int *)p2;
 
-    int diff = arr[0] - arr1[0];
-    return diff;
+        int diff = arr[0] - arr1[0];
+        return diff;
 }
 
 static float max() {
-    return (float)rand() / (float)RAND_MAX;
+        return (float)rand() / (float)RAND_MAX;
 }
