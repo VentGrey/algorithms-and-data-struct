@@ -1,6 +1,7 @@
 #include <iostream>
 #include <time.h>
 #include "onemax.hpp"
+#include <stdlib.h> // Para el atoi :v
 
 using namespace std;
 
@@ -11,6 +12,9 @@ int main(int argc, char *argv[]) {
                 cout << "Ningún argumento fue provisto...saliendo" << endl;
                 return -1;
         }
+
+        int m =
+
         srand(time(NULL));
         int m, n, gene, samp;
 
