@@ -18,7 +18,9 @@ pub fn circle() {
         Ok(num1) => {
             println!("El radio se registró correctamente! {}", num1);
             let area: f64 = num1 * num1 * PI;
+            let perim: f64 = (num1 * 2.0) * PI;
             println!("El área del círculo es: {}", area);
+            println!("La circúnferencia es: {}", perim);
         }
         Err(e) => {
             eprintln!("Esto no es un número {}", num1);
