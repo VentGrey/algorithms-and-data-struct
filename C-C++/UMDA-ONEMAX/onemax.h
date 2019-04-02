@@ -2,12 +2,8 @@
 #include <cstdlib>
 #include <time.h>
 
-
 #ifndef __ONEMAX_H_
 #define __ONEMAX_H_
-
-
-
 
 #endif // __ONEMAX_H_
 
@@ -15,8 +11,6 @@
 
 static float max();
 static int compare();
-
-
 
 // Funciones de cabecera
 
@@ -26,6 +20,7 @@ static int compare(void* p1, void* p2) {
     int* arr1 = (int *)p2;
 
     int diff = arr[0] - arr1[0];
+    return diff;
 }
 
 static float max() {
