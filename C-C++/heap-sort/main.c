@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+void create();
+void down_adjust();
 
 int main(int argc, char *argv[]) {
         int heap[30], n, last, temp;
@@ -40,5 +42,22 @@ void create(int heap[]) {
 }
 
 void down_adjust(int heap[], int i) {
-       
+       int j,temp,n,flag=1;
+	n=heap[0];
+
+	while(2*i<=n && flag==1)
+	{
+		j=2*i;    //j points to left child
+		if(j+1<=n && heap[j+1] > heap[j])
+			j=j+1;
+		if(heap[i] > heap[j])
+			flag=0;
+		else
+		{
+			temp=heap[i];
+			heap[i]=heap[j];
+			heap[j]=temp;
+			i=j;
+		}
+	}
 }
