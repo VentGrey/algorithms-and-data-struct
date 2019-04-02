@@ -3,7 +3,7 @@ suma, resta y multiplicación de dichos números.*/
 
 use std::io;
 
-fn basic_op() {
+pub fn basic_op() {
     println!("Please input your first number");
     let mut scanner = String::new();
 
