@@ -31,5 +31,17 @@ int main(int argc, char *argv[]) {
                 }
         }
 
+
+        // Puntero "unsafe" para la población
+        int *ptr;
+        ptr = &pob[0][0];
+
+        for (int i = 0; i < m; i++) {
+                for (int j = 0; j < best; j++) {
+                        cout << *(ptr + i*(best) + j) << endl;
+                }
+                cout << endl;
+        }
+
         return 0;
 }
