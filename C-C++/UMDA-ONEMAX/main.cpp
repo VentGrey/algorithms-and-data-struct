@@ -1,7 +1,8 @@
 #include <iostream>
 #include <time.h>
-#include "onemax.hpp"
 #include <stdlib.h> // Para el atoi :v
+
+#include "onemax.hpp"
 
 using namespace std;
 
@@ -13,10 +14,14 @@ int main(int argc, char *argv[]) {
                 return -1;
         }
 
-        int m =
+
+        int m = atoi(argv[1]);
+        int n = atoi(argv[2]);
+        int gene = atoi(argv[3]);
+        int samp =atoi(argv[4]);
 
         srand(time(NULL));
-        int m, n, gene, samp;
+
 
         cout << "Ingrese el número de individuos" << endl;
         cin >> m;
