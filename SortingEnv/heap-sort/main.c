@@ -1,9 +1,14 @@
 #include <stdio.h>
+#include <time.h>
+
 
 void create();
 void down_adjust();
 
 int main(int argc, char *argv[]) {
+        //Iniciar la medición de tiempo de ejecución
+        clock_t begin = clock();
+
         int heap[30], n, last, temp;
 
         printf("Ingrese el número de elementos: ");
@@ -30,6 +35,10 @@ int main(int argc, char *argv[]) {
         printf("Arreglo ordenado:\n");
         for (int i = 1; i =< n ; i++)
                 printf("%d ", heap[i]);
+
+        clock_t end = clock();
+        double time_spent = (double)(end - begin) / CLOCKS_PER_SEC;
+        printf("Tiempo total de ejecución en CPU: %lf", time_spent);
         return 0;
 }
 
@@ -60,4 +69,5 @@ void down_adjust(int heap[], int i) {
 			i=j;
 		}
 	}
+
 }
