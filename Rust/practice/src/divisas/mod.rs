@@ -1,0 +1,7 @@
+/////////////////////////////////////////////////////////////////////////////////////
+// En una Casa de Cambio necesitan construir un programa tal que dado como         //
+// dato una cantidad expresada en dólares, convierta esa cantidad a pesos. Elabore //
+// un programa que permita resolver el problema.                                   //
+/////////////////////////////////////////////////////////////////////////////////////
+
+use std::io;
