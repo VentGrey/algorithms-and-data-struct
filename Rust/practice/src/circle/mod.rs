@@ -1,6 +1,7 @@
 /* Escriba un programa tal que dado el radio de un cı́rculo, calcule e imprima
 el área y la circunferencia del mismo.*/
 
+use std::error::Error;
 use std::f64::consts::PI;
 use std::io;
 
@@ -24,7 +25,7 @@ pub fn circle() {
         }
         Err(e) => {
             eprintln!("Esto no es un número {}", num1);
-            eprintln!("Error: {}", e.to_string());
+            eprintln!("Error: {}", e.description());
         }
     }
 }
