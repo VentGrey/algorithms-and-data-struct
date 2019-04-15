@@ -3,6 +3,8 @@
 
 #include <list> // Para utilizar listas, que flojera hacer las mías
 
+using std::list;
+
 /* Las interfaces en C++ se implementan utilizando clases
  * abstractas y dichas clases abstractas no deberán de ser
  * confundidas con la abstracción de datos el cual es un
@@ -19,6 +21,7 @@
 class IFuncionObjetivo {
 public:
         virtual int Evaluar() = 0;
+        int Evaluar(list<int> values);
 };
 
 #endif // __IFUNCIONOBJETIVO_H_
