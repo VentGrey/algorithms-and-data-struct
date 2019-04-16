@@ -3,5 +3,8 @@
 
 #include "../base/IFuncionObjetivo.hpp"
 
+class Item {
+
+};
 
 #endif // __ITEM_H_
