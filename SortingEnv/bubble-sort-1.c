@@ -5,7 +5,7 @@
 //-- Prototipos
 void swap(int *a, int *b);
 void sort(int a[], int n);
-
+void printsort(int a[], int tam);
 
 //-- Función main
 int main(int argc, char *argv[])
@@ -18,7 +18,8 @@ int main(int argc, char *argv[])
 
 //-- Funciones externas
 
-void sort(int a[], int n) {
+void sort(int a[], int n)
+{
         int boolean;
 
         for (int i = 0; i < n - 1; i++) {
@@ -32,6 +33,15 @@ void sort(int a[], int n) {
                 if (boolean == 0)
                         break;
         }
+}
+
+
+void printsort(int a[], int tam)
+{
+        for (int i = 0; i < tam; i++) {
+                printf("%d ", a[i]);
+        }
+        printf("\n");
 }
 
 
