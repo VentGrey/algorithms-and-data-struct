@@ -4,7 +4,7 @@
 
 //-- Prototipos
 void swap(int *a, int *b);
-
+void sort(int a[], int n);
 
 
 //-- Función main
@@ -17,14 +17,25 @@ int main(int argc, char *argv[])
 
 
 //-- Funciones externas
-<<<<<<< HEAD
 
+void sort(int a[], int n) {
+        int boolean;
 
+        for (int i = 0; i < n - 1; i++) {
+                boolean = 0;
+                for (int j = 0; j < n - i; j++) {
+                        if (a[j] > a[j + 1]) {
+                                swap(&a[j], &a[j + 1]);
+                                boolean = 1;
+                        }
+                }
+                if (boolean == 0)
+                        break;
+        }
+}
 
 
 // Cambio de variables con punteros
-=======
->>>>>>> e4c1671dc274d256cacf048f2699f76806d06bb2
 void swap(int *a, int *b)
 {
     int tmp = *a;
