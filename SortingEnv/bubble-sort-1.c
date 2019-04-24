@@ -1,6 +1,6 @@
 //-- Cabeceras
 #include <stdio.h>
-
+#include <stdlib.h>
 
 //-- Prototipos
 void swap(int *a, int *b);
@@ -10,8 +10,8 @@ void printsort(int a[], int tam);
 //-- Función main
 int main(int argc, char *argv[])
 {
-
-    return 0;
+        int n = atoi(argv[1]);
+        return 0;
 }
 
 
@@ -48,7 +48,7 @@ void printsort(int a[], int tam)
 // Cambio de variables con punteros
 void swap(int *a, int *b)
 {
-    int tmp = *a;
-    *a = *b;
-    *b = tmp;
+        int tmp = *a;
+        *a = *b;
+        *b = tmp;
 }
