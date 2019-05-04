@@ -20,3 +20,27 @@ impl Nodo { // Aquí colocaremos los métodos del "objeto" nodo.
         }))
     }
 }
+
+#[derive(Clone)]
+pub struct Registro {
+    cabeza: Link,
+    cola: Link,
+    pub tam: u64,
+}
+
+impl Registro { // Métodos del objeto "Registro"
+    pub fn new_empty() -> Registro {
+        Registro { cabeza: None, cola: None, tam: 0 }
+    }
+
+    pub fn append(&mut self, valor: String) {
+        let new = Nodo::new(valor);
+
+        match self.cola.take() {
+            Some(old) => old.borrow_mut().next = Some(new.clone()),
+            None => self.cabeza = Some(new.clone())
+        };
+        self.tam += 1;
+        self.cola = Some(new);
+    }
+}
