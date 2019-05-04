@@ -43,4 +43,20 @@ impl Registro { // Métodos del objeto "Registro"
         self.tam += 1;
         self.cola = Some(new);
     }
+
+    pub fn pop(&mut self) -> Option<String> {
+        self.cabeza.take().map(|head| {
+            if let Some(sig) = cabeza.borrow_mut().next.take() {
+                self.cabeza = Some(sig);
+            } else {
+                self.cola.take();
+            }
+            self.tam -= 1;
+            Rc::try_unwrap(cabeza)
+                .ok()
+                .expect("Ocurrió un turbo error")
+                .into_inner()
+                .value
+        })
+    }
 }
