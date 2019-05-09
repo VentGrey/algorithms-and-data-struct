@@ -57,6 +57,7 @@ impl List {
 // Código para pruebas, favor de no mover :3
 
 mod test {
+    use super::List;
     #[test]
     fn basics() {
         let mut list = List::new();
