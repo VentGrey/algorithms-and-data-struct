@@ -1,6 +1,5 @@
 use std::mem;
 
-
 // Solo vamos a permitir los enteros de 32 bits
 pub struct List {
     head: Link,
@@ -13,7 +12,7 @@ enum Link {
 
 struct Node {
     elem: i32,
-    nect: Link,
+    next: Link,
 }
 
 /*
