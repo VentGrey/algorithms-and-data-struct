@@ -53,3 +53,12 @@ impl List {
         }
     }
 }
+
+// Código para pruebas, favor de no mover :3
+
+mod test {
+    #[test]
+    fn basics() {
+        //TODO
+    }
+}
