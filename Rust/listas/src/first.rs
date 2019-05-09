@@ -39,5 +39,6 @@ impl List {
         });
 
         self.head = Link::More(new_node);
+
     }
 }
