@@ -1,5 +1,7 @@
-// Solo vamos a permitir los enteros de 32 bits
+use std::mem;
 
+
+// Solo vamos a permitir los enteros de 32 bits
 pub struct List {
     head: Link,
 }
