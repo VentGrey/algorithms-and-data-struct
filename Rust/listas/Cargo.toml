@@ -1,7 +1,0 @@
-[package]
-name = "listas"
-version = "0.1.0"
-authors = ["Omar Jair Purata Funes <omarpurataf@gmail.com>"]
-edition = "2018"
-
-[dependencies]
