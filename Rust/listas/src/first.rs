@@ -81,6 +81,12 @@ impl Drop for Box<Node> {
     }
 }
 
+impl Drop for Node {
+    fn drop(&mut self) {
+        self.next.drop();
+    }
+}
+
 // Código para pruebas, favor de no mover :3
 
 mod test {
