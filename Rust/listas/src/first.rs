@@ -64,40 +64,29 @@ impl Drop for List {
 }
 // Código para pruebas, favor de no mover :3
 
+#[cfg(test)]
 mod test {
     use super::List;
+
     #[test]
     fn basics() {
         let mut list = List::new();
 
-        // Prueba de que la lista vacía funcione bien
         assert_eq!(list.pop(), None);
 
-        // Aquí poblaremos la lista
         list.push(1);
         list.push(2);
         list.push(3);
-        list.push(4);
-        list.push(5);
-        list.push(6);
-        list.push(7);
-        list.push(8);
-        list.push(9);
-        list.push(10);
 
-        // Probar que eliminar elementos funciona
         assert_eq!(list.pop(), Some(3));
         assert_eq!(list.pop(), Some(2));
 
-        // Meter mas elementos para ver si se rompe algo
-        list.push(11);
-        list.push(12);
+        list.push(4);
+        list.push(5);
 
-        // Eliminar los mismos elementos
-        assert_eq!(list.pop(), Some(11));
-        assert_eq!(list.pop(), Some(12));
+        assert_eq!(list.pop(), Some(5));
+        assert_eq!(list.pop(), Some(4));
 
-        // Revisar el final de la lista
         assert_eq!(list.pop(), Some(1));
         assert_eq!(list.pop(), None);
     }
