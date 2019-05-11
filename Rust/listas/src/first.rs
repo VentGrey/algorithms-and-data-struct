@@ -74,6 +74,13 @@ impl Drop for Link {
     }
 }
 
+impl Drop for Box<Node> {
+    fn drop(&mut self) {
+        self.ptr.drop();
+        deallocate(self.prt);
+    }
+}
+
 // Código para pruebas, favor de no mover :3
 
 mod test {
