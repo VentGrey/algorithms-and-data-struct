@@ -63,6 +63,17 @@ impl Drop for List {
     }
 }
 
+impl Drop for Link {
+    fn drop(&mut self) {
+        match *self {
+            Link::Empty => {}
+            Link::More(ref mut boxed_node) => {
+                boxed_node.drop();
+            }
+        }
+    }
+}
+
 // Código para pruebas, favor de no mover :3
 
 mod test {
