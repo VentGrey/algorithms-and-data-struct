@@ -1,14 +1,14 @@
 use std::mem;
 
-pub struct List {
-    head: Link,
+pub struct List<T> {
+    head: Link<T>,
 }
 
-type Link = Option<Box<Node>>;
+type Link<T> = Option<Box<Node<T>>>;
 
-struct Node {
+struct Node<T> {
     elem: i32,
-    next: Link,
+    next: Link<T>,
 }
 
 impl List {
