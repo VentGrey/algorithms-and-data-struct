@@ -58,3 +58,16 @@ pub trait Iterator {
     type Item;
     fn next(&mut self) -> Option<Self::Item>;
 }
+
+// TEMPORAL
+// Las estructuras de tuplas son una forma
+// alternativa a escribir estructuras, muy útiles
+// cuando se necesitan "wrappers" con otros tipos
+// de datos "genéricos"
+pub struct IntoIter<T>(List<T>);
+
+impl<T> List<T> {
+    pub fn into_iter(self) -> IntoIter<T> {
+        IntoIter(self)
+    }
+}
