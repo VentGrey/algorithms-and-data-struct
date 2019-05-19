@@ -66,6 +66,11 @@ pub trait Iterator {
 // de datos "genéricos"
 pub struct IntoIter<T>(List<T>);
 
+pub struct  Iter<T> {
+    next: Option<&Node<T>>,
+}
+
+
 impl<T> List<T> {
     pub fn into_iter(self) -> IntoIter<T> {
         IntoIter(self)
