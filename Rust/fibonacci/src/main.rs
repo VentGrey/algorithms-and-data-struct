@@ -4,5 +4,5 @@ fn main(a:i32, b:i32, n:i32) {
         return;
     }
 
-    fibonacci(b, a + b, n - 1);
+    main(b, a + b, n - 1);
 }
