@@ -6,10 +6,12 @@
 
 
 // -- prototyped
-void bubble(int arr[]);
+void bubble(int *arr);
+void bubble_imp(int *arr);
 
-
-void bubble(int *arr) {
+// -- functions
+void bubble(int *arr)
+{
         int n = sizeof(arr);
         for (int i = 0; i < n - 1; i++) {
                 for (int j = 0; j < n - i - 1; j++) {
@@ -20,6 +22,11 @@ void bubble(int *arr) {
                         }
                 }
         }
+}
+
+void bubble_imp()
+{
+
 }
 
 #endif // __BUBBLESORTS_H_
