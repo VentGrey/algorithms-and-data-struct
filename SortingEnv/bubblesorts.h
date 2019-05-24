@@ -43,7 +43,8 @@ void bubble_imp(float *arr)
         }
 }
 
-void bubble_flag(int *arr, int n) {
+void bubble_flag(int *arr, int n)
+{
 
         bool sorted = false;
         int tmp = 0;
