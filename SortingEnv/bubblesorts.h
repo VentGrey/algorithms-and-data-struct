@@ -6,11 +6,11 @@
 
 
 // -- prototyped
-void bubble(int *arr);
-void bubble_imp(int *arr);
+void bubble(float *arr);
+void bubble_imp(float *arr);
 
 // -- functions
-void bubble(int *arr)
+void bubble(float *arr)
 {
         int n = sizeof(arr);
         for (int i = 0; i < n - 1; i++) {
@@ -24,7 +24,7 @@ void bubble(int *arr)
         }
 }
 
-void bubble_imp(int *arr)
+void bubble_imp(float *arr)
 {
         int tmp = 0;
 
@@ -41,6 +41,27 @@ void bubble_imp(int *arr)
                 if (!swap)
                         break;
         }
+}
+
+void bubble_flag(int *arr, int n) {
+
+        bool sorted = false;
+        int tmp = 0;
+        int comps = n -1;
+
+        while (!sorted) {
+                sorted = true;
+                for (int i = 0; i < comps; i++) {
+                        if (arr[i] > arr[i + 1]) {
+                                tmp = arr[i];
+                                arr[i] = arr[i + 1];
+                                arr[i + 1] = tmp;
+                                sorted = false;
+                        }
+                }
+                comps --;
+        }
+
 }
 
 #endif // __BUBBLESORTS_H_
