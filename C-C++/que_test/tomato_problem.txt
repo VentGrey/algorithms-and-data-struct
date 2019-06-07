@@ -1,0 +1,17 @@
+It's BaekJoon Problem No.7576
+https://www.acmicpc.net/problem/7576
+
+Problem:
+Jenny's tomato farm has a large storage room for tomatoes. The tomatoes are placed in a box in the grid box as shown in the picture below and stored in a warehouse.(Picture is in that link)
+
+Some of the tomatoes kept in the warehouse are ripe, but some may still be raw. After a day of storage, unripe tomatoes adjacent to ripe tomatoes ripen under the influence of ripe tomatoes. The adjacent part of one tomato means the tomato in the left, right, front, and back four directions. It does not affect the tomatoes in the diagonal direction and assumes that the tomatoes do not ripen by themselves. He wants to know if the tomatoes stored in the warehouse are ready to be cooked in a few days.
+
+Given the size of the grid-shaped boxes that store the tomatoes in the warehouse, and the information of ripe tomatoes and unripe tomatoes, write a program to get the minimum number of days that tomatoes are all ripe after a few days. However, some boxes may not contain tomatoes.
+
+Input:
+In the first line, two integers M and N denoting the size of the box are given. M is the number of horizontal boxes in the box, and N is the number of vertical boxes in the box. However, 2? M and N? 1,000. From the second row, information about the tomatoes stored in a box is given. In other words, the N lines from the second line give information about the tomatoes in the box. On one line, the status of the tomatoes contained in the horizontal line of the box is given as M integers. An integer 1 represents a ripe tomato, an integer 0 represents a raw tomato, and an integer -1 represents a space containing no tomato.
+
+Output:
+You should print the minimum date until the tomatoes are all ripe. If all the tomatoes have been cooked from the time they are stored, 0 should be output. If the tomatoes are not all ripe, they should be printed as -1.
+
+Examples of Input and Output are in that link.
