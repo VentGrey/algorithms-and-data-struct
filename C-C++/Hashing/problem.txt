@@ -1,0 +1,24 @@
+It's about BaekJoon n.10931
+
+https://www.acmicpc.net/problem/10931
+
+Problem:
+A list of telephone numbers is given. At this time, write a program to determine if this list is consistent or not.
+
+For a list of telephone numbers to be consistent, one number should not be a prefix of another number.
+
+For example, consider the following list of phone numbers;
+
+- Emergency Call: 911
+- Jenny: 97 625 999
+- Minsu: 91 12 54 26
+
+In this case, there is no way to call Jenny. It is because the emergency call is made as soon as you hold the telephone and press the first three digits of the number. Thus, this list is an inconsistent list.
+
+Input:
+The first line gives the number of test cases t. (1 ≤ t ≤ 50) The first line of each test case is given the number n of telephone numbers. (1 ≤ n ≤ 10000) The next n lines are given one telephone number included in the list. The phone number is 10 digits long, and the two phone numbers in the list are not the same
+
+Output:
+For each test case, output YES if the list is consistent, NO if not
+
+Examples of Input and Output is in that link.

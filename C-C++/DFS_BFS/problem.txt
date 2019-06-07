@@ -1,0 +1,12 @@
+It's about BakJoon n.1260
+
+https://www.acmicpc.net/problem/1260
+
+Problem:
+Write a program that displays the results of DFS and BFS graphs. However, if there are several vertices that can be visited, visit the one with the smallest vertex number first, and if there are no more points to visit, quit. Vertex numbers are from 1 to N.
+
+Input:
+In the first line, the number of vertices N (1 ≤ N ≤ 1,000), the number of edges M (1 ≤ M ≤ 10,000), and the number V of the vertices at which to start searching are given. The following M lines give the number of the two vertices to which the trunk connects. There can be multiple trunks between any two vertices. The trunk given as input is bidirectional.
+
+Output:
+Outputs the result of performing DFS on the first line, and BFS on the next line. From V, you can print the points in order.

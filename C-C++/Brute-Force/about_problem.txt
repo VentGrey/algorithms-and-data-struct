@@ -1,0 +1,28 @@
+It's Tetromino Problem using Brute-Force Algorithm.
+
+https://www.acmicpc.net/problem/14500
+
+Problem:
+A polyomino is a figure with several 1 × 1 squares, and the following conditions must be met.
+- The squares should not overlap each other
+- All figures must be connecter
+- The sides of the square should be connected. That is, it should not touch only the corner and the vertex.
+
+Polymino with four squares, is called Tetromino.
+Pictures of 5 tetrominos are in the link.
+
+I want to put one Tetromino on paper of size N × M. The paper is divided into 1 × 1 size cells, each of which contains an integer.
+
+Write a program that maximizes the sum of the numbers written in the space where the tetromino is placed by placing one tetromino.
+
+The tetromino must be placed so that one square contains exactly one square, and may be rotated or symmetrically placed.
+
+Input:
+In the first line, the vertical size N of the paper and the horizontal size M are given.(4<=N, M<=500)
+
+From the second line, N lines give the number written on the paper. The jth number in the i-th row is the number from the top to the ith column, from the left to the j-th column. The number given as input is a natural number not exceeding 1,000.
+
+Output:
+In the first line, the maximum value of the sum of the numbers written in the column where Tetromino is placed.
+
+Examples of Input and Output is in that link.
