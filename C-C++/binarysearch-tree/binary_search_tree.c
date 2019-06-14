@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
 #define	LENGTH 10
 
-typedef enum{false, true}bool;
 typedef int Data;
 
 typedef struct Node {
