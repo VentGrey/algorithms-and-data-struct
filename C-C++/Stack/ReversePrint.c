@@ -1,7 +1,9 @@
 #include <stdio.h>
+#include <stdbool.h>
+
 #define MAX_STACK 100
 
-typedef enum {false, true} bool;
+
 typedef int Data;
 
 typedef struct{
