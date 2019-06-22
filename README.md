@@ -16,7 +16,7 @@ If you want to contribute to this repository you can do it freely, I'll just ask
 for two things:
 
 * If you use a new language please create a directory for it.
-* If you create a sorting algorithm please check out the `sorting-env` directory
+* If you create a sorting algorithm please check out the `sorting-env` directory.
   in the root of this project.
 
 ## Plans for the future
