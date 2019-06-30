@@ -14,20 +14,14 @@ int find(void)
 	struct tri *tmp = &head;
 	int i, j;
 
-	for(i = 0; p[i]; i++)
-	{
-		if(tmp->next[p[i] - '0'] == 0)
-		{
+	for(i = 0; p[i]; i++) {
+		if(tmp->next[p[i] - '0'] == 0) {
 			tmp->next[p[i] - '0'] = &x[xl];
-
 			for(j = 0; j < 10; j++)
 				x[xl].next[j] = 0;
-
 			x[xl++].exist = 0;
 		}
-
 		tmp = tmp->next[p[i] - '0'];
-
 		if(tmp->exist)
 			return 1;
 	}
@@ -47,8 +41,7 @@ int main()
 
 	scanf("%d", &T);
 
-	while(T--)
-	{
+	while(T--) {
 		chk = 0;
 		xl = 0;
 
@@ -57,8 +50,7 @@ int main()
 
 		scanf("%d", &N);
 
-		while(N--)
-		{
+		while(N--) {
 			scanf("%s", p);
 
 			if(find())
