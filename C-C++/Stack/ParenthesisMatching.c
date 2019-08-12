@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 #define MAX_STACK 100
 
 typedef enum {false, true} bool;
