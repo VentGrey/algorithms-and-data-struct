@@ -25,3 +25,4 @@ for two things:
 * Create a CI/CD file to check pull requests
 * Get this repo to more awesome people :D
 * Create a Github Page
+* Start Adding IA Algorithms
