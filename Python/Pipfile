@@ -9,6 +9,8 @@ verify_ssl = true
 nltk = "*"
 pylint = "*"
 python-language-server = "*"
+opencv-python = "*"
+numpy = "*"
 
 [requires]
 python_version = "3.7"
