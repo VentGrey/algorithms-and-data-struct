@@ -11,6 +11,7 @@ pylint = "*"
 python-language-server = "*"
 opencv-python = "*"
 numpy = "*"
+scipy = "*"
 
 [requires]
 python_version = "3.7"
