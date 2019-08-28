@@ -6,9 +6,6 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-nltk = "*"
-pylint = "*"
-python-language-server = "*"
 
 [requires]
 python_version = "3.7"
