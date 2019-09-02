@@ -12,6 +12,8 @@ python-language-server = "*"
 opencv-python = "*"
 numpy = "*"
 scipy = "*"
+matplotlib = "*"
+imutils = "*"
 
 [requires]
 python_version = "3.7"
