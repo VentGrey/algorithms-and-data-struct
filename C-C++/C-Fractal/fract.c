@@ -23,10 +23,14 @@ int main(int argc, char const *argv[])
         int iter = atoi(argv[3]);
 
         // Para discretizar la función
-        const double sup_real = atof(argv[4]); // Límite superior de los números reales
-        const double inf_real = atof(argv[5]); // Límite inferior de los números reales
-        const double sup_imag = atof(argv[6]); // Lim superior de los números imaginarios
-        const double inf_imag = atof(argv[7]); // Lim inferior de los números imaginarios
+        const double sup_real = atof(argv[4]);
+        // Límite superior de los números reales
+        const double inf_real = atof(argv[5]);
+        // Límite inferior de los números reales
+        const double sup_imag = atof(argv[6]);
+        // Lim superior de los números imaginarios
+        const double inf_imag = atof(argv[7]);
+        // Lim inferior de los números imaginarios
 
         if (argv[1] == 0 || argv[2] == 0) {
                 printf("No se aceptan dimensiones 'cero'");
@@ -89,3 +93,5 @@ complex double mandelbrot(int max, complex double z0, complex double c) {
                 return 1;
         }
 }
+
+// Pasarse de la columna 80 es de geis
