@@ -1,4 +1,4 @@
-# Introduction
+# Introduction :rocket:
 
 [![](https://sourcerer.io/fame/VentGrey/VentGrey/algorithms-and-data-struct/images/0)](https://sourcerer.io/fame/VentGrey/VentGrey/algorithms-and-data-struct/links/0)[![](https://sourcerer.io/fame/VentGrey/VentGrey/algorithms-and-data-struct/images/1)](https://sourcerer.io/fame/VentGrey/VentGrey/algorithms-and-data-struct/links/1)[![](https://sourcerer.io/fame/VentGrey/VentGrey/algorithms-and-data-struct/images/2)](https://sourcerer.io/fame/VentGrey/VentGrey/algorithms-and-data-struct/links/2)[![](https://sourcerer.io/fame/VentGrey/VentGrey/algorithms-and-data-struct/images/3)](https://sourcerer.io/fame/VentGrey/VentGrey/algorithms-and-data-struct/links/3)[![](https://sourcerer.io/fame/VentGrey/VentGrey/algorithms-and-data-struct/images/4)](https://sourcerer.io/fame/VentGrey/VentGrey/algorithms-and-data-struct/links/4)[![](https://sourcerer.io/fame/VentGrey/VentGrey/algorithms-and-data-struct/images/5)](https://sourcerer.io/fame/VentGrey/VentGrey/algorithms-and-data-struct/links/5)[![](https://sourcerer.io/fame/VentGrey/VentGrey/algorithms-and-data-struct/images/6)](https://sourcerer.io/fame/VentGrey/VentGrey/algorithms-and-data-struct/links/6)[![](https://sourcerer.io/fame/VentGrey/VentGrey/algorithms-and-data-struct/images/7)](https://sourcerer.io/fame/VentGrey/VentGrey/algorithms-and-data-struct/links/7)
 
@@ -25,4 +25,4 @@ for two things:
 * Create a CI/CD file to check pull requests
 * Get this repo to more awesome people :D
 * Create a Github Page
-* Start Adding IA Algorithms
+* Start Adding IA Algorithms.
