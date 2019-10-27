@@ -15,7 +15,7 @@ You are free to use this programs for whatever you want.
 ## Contributing
 
 If you wish to contribute to this repository please check out the
-[CONTRIBUTING](CONTRIBUTING) file in this same repo.
+[CONTRIBUTING](CONTRIBUTING.md) file in this same repo.
 
 ## Plans for the future
 
