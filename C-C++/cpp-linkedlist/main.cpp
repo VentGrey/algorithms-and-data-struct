@@ -29,7 +29,25 @@ class LinkedList {
         int getSize() {
             return size;
         }
+
+        void append(int data) {
+            // Crear un nuevo nodo
+            Node *n = new Node(data);
+
+            // Si la lista está vacía
+            if (header == NULL) {
+                header = n;
+                tail = n;
+            } else {
+                tail -> next = n;
+                tail = n;
+            }
+
+            size++;
+        }
 };
+
+
 
 int main(int argc, char *argv[]) {
 
