@@ -11,7 +11,25 @@ class Node {
             this -> data = data;
             next = NULL;
         }
-}
+};
+
+class LinkedList {
+    private:
+        Node *header;
+        Node *tail;
+        int size;
+
+    public:
+        LinkedList() {
+            header = NULL;
+            tail = NULL;
+            size = 0;
+        }
+
+        int getSize() {
+            return size;
+        }
+};
 
 int main(int argc, char *argv[]) {
 
