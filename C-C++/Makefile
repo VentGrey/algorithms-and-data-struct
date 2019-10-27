@@ -38,7 +38,7 @@ alone:
 
 	$(CC) $(CFLAGS) $(LIBS)	-o $(OUT_DIR)Tetromino $(BRT_FRC_DIR)tetromino.c
 
-	$(CC) $(CFLAGS) $(LIBS)	-o $(OUT_DIR)Mandelbrot $(C_FRT_DIR)fract.c
+	$(CC) $(CFLAGS)	-o $(OUT_DIR)Mandelbrot $(LIBS) $(C_FRT_DIR)fract.c
 
 	$(CC) $(CFLAGS) $(LIBS)	-o $(OUT_DIR)Answer $(DFS_BFS_DIR)answer.c
 
