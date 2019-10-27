@@ -1,0 +1,24 @@
+name: C/C++ CI
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    
+    runs-on: {{matrix.os}}
+    
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macOS-latest]
+    
+    steps:
+    - uses: actions/checkout@v1
+    - name: Look in directory
+      run:  cd C-C++/
+    - name: Only Compile C files
+      run: make alone
+    - name: Compile all programs inside
+      run: make all
+    - name: Cleanup
+      run: make clean
+      
