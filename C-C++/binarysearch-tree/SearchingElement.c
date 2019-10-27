@@ -17,3 +17,9 @@ BSTNode* Search(BSTNode* root, Key key)
 	    else
 		    return Search(root->right_child, key);
 }
+
+int main(int argc, char *argv[])
+{
+		// Fill This
+		return 0;
+}
