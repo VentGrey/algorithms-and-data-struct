@@ -61,11 +61,28 @@ class LinkedList {
 
             size++;
         }
+
+        void toString() {
+            Node *tmp = header;
+
+            while (tmp != NULL) {
+                cout << tmp -> data << " ";
+                tmp = tmp -> next;
+            }
+            cout << endl;
+        }
 };
 
 
 
 int main(int argc, char *argv[]) {
+    LinkedList list;
+    list.append(1);
+    list.append(2);
+    list.append(3);
+
+    list.prepend(10);
+    list.toString();
 
     return 0;
 }
