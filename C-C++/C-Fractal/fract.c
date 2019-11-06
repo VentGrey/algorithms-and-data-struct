@@ -47,6 +47,12 @@ int main(int argc, char const *argv[])
                 return 0;
         }
 
+        if (argv[4] == NULL || argv[5] == NULL || argv[6] == NULL ||
+            argv[7] == NULL) {
+                printf("No se permiten límites nulos!");
+                return 0;
+        }
+
         int matrix [m][n];
 
 
