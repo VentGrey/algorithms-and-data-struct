@@ -37,15 +37,16 @@ int main(int argc, char const *argv[])
                 return 0;
         }
 
-      if (argv[3] == 0) {
+      	if (argv[3] == 0) {
                 printf("El iterador no puede ser cero");
                 return 0;
-      }
+      	}
 
-      if (argv[4] == 0 || argv[5] == 0 || argv[6] == 0 || argv[7] == 0) {
+      	if (argv[4] == 0 || argv[5] == 0 || argv[6] == 0 || argv[7] == 0) {
                 printf("No se aceptan límites en cero");
                 return 0;
         }
+
         int matrix [m][n];
 
 
@@ -74,8 +75,7 @@ int main(int argc, char const *argv[])
                 }
                 fputs("\n", fp);
         }
-        /* fputs("",fp); */ //Al final esto es useless, le daré seguimiento en
-        // GitHub
+        /* fputs("",fp); */ //Al final esto es inútil.
 
         return 0;
 }
@@ -94,4 +94,4 @@ complex double mandelbrot(int max, complex double z0, complex double c) {
         }
 }
 
-// Pasarse de la columna 80 es de geis
+// No pasarse de la columna 80 >:c
