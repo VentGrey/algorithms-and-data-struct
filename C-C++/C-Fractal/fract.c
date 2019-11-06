@@ -3,8 +3,7 @@
 #include <complex.h> // Biblioteca para números complejos
 #include <stdio.h>
 #include <math.h>
-
-
+#include <errno.h>
 
 //--- Prototipos
 complex double mandelbrot(int max, complex double z0, complex double c);
