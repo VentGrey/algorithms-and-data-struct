@@ -33,23 +33,23 @@ int main(int argc, char const *argv[])
 
         if (argv[1] == 0 || argv[2] == 0) {
                 printf("No se aceptan dimensiones 'cero'");
-                return 0;
+                return EINVAL;
         }
 
       	if (argv[3] == 0) {
                 printf("El iterador no puede ser cero");
-                return 0;
+                return EINVAL;
       	}
 
       	if (argv[4] == 0 || argv[5] == 0 || argv[6] == 0 || argv[7] == 0) {
                 printf("No se aceptan límites en cero");
-                return 0;
+                return EINVAL;
         }
 
         if (argv[4] == NULL || argv[5] == NULL || argv[6] == NULL ||
             argv[7] == NULL) {
                 printf("No se permiten límites nulos!");
-                return 0;
+                return EINVAL;
         }
 
         int matrix [m][n];
