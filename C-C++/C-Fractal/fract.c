@@ -16,7 +16,6 @@ int main(int argc, char const *argv[])
                 return 0;
         }
 
-
         const int n = atoi(argv[1]);
         const int m = atoi(argv[2]);
         int iter = atoi(argv[3]);
@@ -37,7 +36,7 @@ int main(int argc, char const *argv[])
         }
 
       	if (argv[3] == 0) {
-                printf("El iterador no puede ser cero");
+                printf("No se pueden hacer cero iteraciones!");
                 return EINVAL;
       	}
 
