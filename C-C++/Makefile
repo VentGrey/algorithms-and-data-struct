@@ -1,7 +1,7 @@
 # --- C Compilers
 CC = gcc
 # -- Clang Alternative
-CL = clang
+CL = clang-8
 
 # --- C++ Compilers
 CPPC = g++

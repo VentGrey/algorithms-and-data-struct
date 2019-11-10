@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-#define	LENGTH 10
+#define	LENGTH 20
 
 typedef int Data;
 
