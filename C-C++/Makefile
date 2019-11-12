@@ -18,6 +18,7 @@ FIB_DIR = fibonacci/
 HSH_DIR = Hashing/
 HEAP_DIR = heap/
 STC_DIR = Stack/
+LHM_DIR = luhm-algorithm/
 
 # --- C++ Directories
 MTH_PSR = math-parser/

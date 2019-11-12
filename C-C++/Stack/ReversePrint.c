@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <stdbool.h>
 
 #define MAX_STACK 100
@@ -60,4 +61,8 @@ void ReversePrint(char*s, int len)
                 printf("%c", ch);
                 Pop(&stack);
         }
+}
+
+int main () {
+        return 0;
 }
