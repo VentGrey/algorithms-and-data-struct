@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <stdlib.h>    
 
 #define MAX_STACK 100
 
@@ -64,4 +64,9 @@ bool IsParantBalanced(char*exp, int len)
                 return true;
         else
                 return false;
+}
+
+int main () {
+
+        return 0;
 }
