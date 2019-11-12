@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 #define MAX_STACK 100
 
@@ -28,7 +29,7 @@ bool IsEmpty(Stack *pstack)
 Data Peek (Stack *pstack)
 {
         if (IsEmpty(pstack))
-                exit(1)
+                exit(1);
         return pstack->items[pstack->top];
 }
 

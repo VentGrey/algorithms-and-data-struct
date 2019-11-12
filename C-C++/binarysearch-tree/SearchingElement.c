@@ -20,6 +20,6 @@ BSTNode* Search(BSTNode* root, Key key)
 
 int main(int argc, char *argv[])
 {
-		// Fill This
+		printf("HOLA");
 		return 0;
 }

@@ -180,7 +180,7 @@ int main (){
 				break;
 			case 2:
 				a = pullOffHeap (heap, SIZE);
-				if (a == VAZIO) printf ("Empty heap!");
+				if (a == EMPTY) printf ("Empty heap!");
 				else printf ("%d pulled off!\n", a);
 				break;
 			case 3:
