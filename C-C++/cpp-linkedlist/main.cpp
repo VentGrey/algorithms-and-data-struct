@@ -118,10 +118,31 @@ class LinkedList {
                 prev -> next = cur -> next;
                 delete cur;
                 size--;
-
             }
+        }
 
+        void insertAt(int pos, int data) {
+            if (pos > size + 1 || pos < 1) {
+                return;
+            } else if (pos == 1) {
+                prepend(data);
+            } else if (pos == size + 1) {
+                append(data);
+            } else if (header != NULL) {
+                Node *n = new Node(data);
+                Node *cur = header;
+                Node *prev;
 
+                for (int i = 1; i < pos; i++) {
+                    prev = cur;
+                    cur = cur -> next;
+                }
+
+                prev -> next = n;
+                n -> next = cur;
+
+                size++;
+            }
         }
 };
 
