@@ -99,6 +99,30 @@ class LinkedList {
                 size--;
             }
         }
+
+        void removeAt(int pos) {
+            if (pos > size || pos < 1) {
+                return;
+            } else if (pos == 1) {
+                removeFirst();
+            } else if (pos == size) {
+                removeLast();
+            } else if (header != NULL) {
+                Node *cur = header;
+                Node *prev;
+
+                for (int i = 1; i < pos; i ++) {
+                    prev = cur;
+                    cur = cur -> next;
+                }
+                prev -> next = cur -> next;
+                delete cur;
+                size--;
+
+            }
+
+
+        }
 };
 
 
