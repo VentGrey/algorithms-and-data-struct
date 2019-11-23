@@ -80,6 +80,25 @@ class LinkedList {
                 size--;
             }
         }
+
+        void removeLast() {
+            if (header -> next == NULL) {
+                removeFirst();
+            } else if (header != NULL) {
+                Node *cur = header;
+                Node *prev;
+
+                while (cur -> next != NULL) {
+                    prev = cur;
+                    cur = cur -> next;
+                }
+
+                tail = prev;
+                prev -> next = NULL;
+                delete cur;
+                size--;
+            }
+        }
 };
 
 
@@ -91,7 +110,9 @@ int main(int argc, char *argv[]) {
     list.append(3);
     list.prepend(10);
     list.toString();
-    list.removeFirst();
+    //list.removeFirst();
+    //list.toString();
+    list.removeLast();
     list.toString();
 
     return 0;
