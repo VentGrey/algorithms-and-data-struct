@@ -54,7 +54,6 @@ int main(int argc, char const *argv[])
         int matrix [m][n];
 
 
-
         double pX = ((sup_real - inf_real) / n);
         double pY = ((sup_imag - inf_imag) / m);
 
