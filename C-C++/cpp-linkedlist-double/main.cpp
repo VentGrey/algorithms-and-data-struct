@@ -61,16 +61,14 @@ class LinkedList {
         void prepend(int data) {
             Node *n = new Node(data);
 
-            // Si la lista está vacía
             if (header == NULL) {
                 header = n;
                 tail = n;
             } else {
-                Node *tmp = header;
+                header -> prev = n;
+                n -> next = header;
                 header = n;
-                n -> next = tmp;
             }
-
             size++;
         }
 
