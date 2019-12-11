@@ -52,9 +52,9 @@ class LinkedList {
                 tail = n;
             } else {
                 tail -> next = n;
+                n -> prev = tail;
                 tail = n;
             }
-
             size++;
         }
 
