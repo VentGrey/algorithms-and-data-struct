@@ -6,14 +6,14 @@
 #include <errno.h>
 
 //--- Prototipos
-complex double mandelbrot(int max, complex double z0, complex double c);
+complex double mandelbrot(unsigned int max, complex double z0, complex double c);
 
 //--- MAIN
 int main(int argc, char const *argv[])
 {
         if (argc == 0) {
-                printf("Ningún argumento fúé provisto!");
-                return 0;
+                printf("Ningún argumento fue provisto!");
+                return 1;
         }
 
         const int n = atoi(argv[1]);
@@ -87,7 +87,8 @@ int main(int argc, char const *argv[])
 
 //-- Retornar el número de iteraciones para revisar si c = a + ib pertenece al
 //-- conjunto de mandelbrot
-complex double mandelbrot(int max, complex double z0, complex double c) {
+complex double mandelbrot(unsigned int max, complex double z0, complex double c)
+{
         if (max > 0) {
                 return mandelbrot(max - 1, cpow(z0, 2) + c, c);
         } else if (cabs(z0) > 2) {
