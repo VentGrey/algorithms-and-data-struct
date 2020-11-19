@@ -12,7 +12,7 @@ complex double mandelbrot(int max, complex double z0, complex double c);
 int main(int argc, char const *argv[])
 {
         if (argc == 0) {
-                printf("Ningún argumento fué provisto!");
+                printf("Ningún argumento fúé provisto!");
                 return 0;
         }
 
